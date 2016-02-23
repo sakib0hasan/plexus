@@ -11,4 +11,9 @@ class Bill extends Model
     ];
 
     protected $table = 'bills';
+
+    public function comments()
+    {
+        return $this->hasMany('App\Comment');
+    }
 }

@@ -62,9 +62,9 @@ Route::group(['middleware' => ['web']], function () {
             return view('dashboard.index');
         });
 
-        Route::get('/comment/{id}', function(){
-            return view('dashboard.comment');
-        });
+        Route::get('/comment/{id}', "CommentController@form");
+        Route::post('/comment/{id}', "CommentController@postComment");
+
 
 
         Route::group(['prefix' => 'admin'], function () {
