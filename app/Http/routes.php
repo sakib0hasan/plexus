@@ -62,6 +62,11 @@ Route::group(['middleware' => ['web']], function () {
             return view('dashboard.index');
         });
 
+        Route::get('/comment/{id}', function(){
+            return view('dashboard.comment');
+        });
+
+
         Route::group(['prefix' => 'admin'], function () {
             // Admin Index
             Route::get('/index', function(){
